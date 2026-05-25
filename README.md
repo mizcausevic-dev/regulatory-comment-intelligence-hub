@@ -3,7 +3,7 @@
 [![CI](https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/actions/workflows/ci.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](./LICENSE)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-025E8C?logo=dependabot&logoColor=white)](./.github/dependabot.yml)
-[![Deploy](https://img.shields.io/badge/deploy-staged%20(fly.io)-lightgrey)](./fly.toml)
+[![Deploy](https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/actions/workflows/pages.yml/badge.svg)](https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/actions/workflows/pages.yml)
 
 TypeScript control plane for regulatory comment intake, obligation mapping, approval posture, and evidence-packaged submission workflows.
 
@@ -76,7 +76,7 @@ Open:
 | License | [AGPL-3.0-or-later](./LICENSE) |
 | Dependencies | Dependabot weekly (npm + GitHub Actions); `npm audit --audit-level=high` in CI |
 | Security | [SECURITY.md](./SECURITY.md) — 0 known high/critical advisories at v1.0-prod |
-| Deploy | Config staged ([fly.toml](./fly.toml) + [Dockerfile](./Dockerfile)); awaiting deploy credentials |
+| Deploy | Static prerender → GitHub Pages ([pages workflow](./.github/workflows/pages.yml)); custom `kineticgain.com` domain pending one DNS record |
 
 ## Docs
 
