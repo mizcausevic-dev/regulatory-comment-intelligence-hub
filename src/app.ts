@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import express from "express";
 
 import {
@@ -19,6 +21,7 @@ import {
 
 const app = express();
 const port = Number(process.env.PORT ?? 5414);
+const host = process.env.HOST || "0.0.0.0";
 
 app.get("/", (_req, res) => res.type("html").send(renderOverview()));
 app.get("/comment-lane", (_req, res) => res.type("html").send(renderCommentLane()));
@@ -35,8 +38,8 @@ app.get("/api/verification", (_req, res) => res.json(verification()));
 app.get("/api/sample", (_req, res) => res.json(payload()));
 
 if (require.main === module) {
-  app.listen(port, "127.0.0.1", () => {
-    console.log(`Regulatory Comment Intelligence Hub listening on http://127.0.0.1:${port}`);
+  app.listen(port, host, () => {
+    console.log(`Regulatory Comment Intelligence Hub listening on http://${host}:${port}`);
   });
 }
 

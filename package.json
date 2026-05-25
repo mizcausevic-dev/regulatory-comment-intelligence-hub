@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub.git"
   },
-  "license": "ISC",
+  "license": "AGPL-3.0-or-later",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/issues"

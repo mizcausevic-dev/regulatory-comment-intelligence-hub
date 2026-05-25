@@ -17,6 +17,10 @@ Regulatory commenting is often treated like a writing exercise when it is really
 
 `regulatory-comment-intelligence-hub` models that operating layer so policy, compliance, legal, and executive teams can inspect where submission readiness is strong and where it is about to fail.
 
+## Why this matters (KG Embedded tie-back)
+
+This repo demonstrates the evidence-packaged submission primitive for GovTech / RegTech buyers: regulatory comment intake tied to obligation mapping, approval blockers, and operator-safe escalation paths. A B2B SaaS buyer would care because public-sector and regulated submission workflows often need to surface inside customer-facing tools without exposing unsafe write paths or fragmented evidence trails. Kinetic Gain Embedded extends this into security-first in-product analytics for obligation-aware and approval-aware reporting across regulated workflows, see [kineticgain.com/embedded](https://kineticgain.com/embedded).
+
 ## Routes
 
 - `/`
@@ -82,4 +86,5 @@ Open:
 
 - [Architecture](./docs/architecture.md)
 - [Origin](./docs/ORIGIN.md)
+- [Kinetic Gain Embedded tie-back](./docs/KINETIC_GAIN_EMBEDDED.md)
 - [Changelog](./CHANGELOG.md)
