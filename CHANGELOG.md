@@ -20,3 +20,10 @@
 - Security: added `SECURITY.md`; `npm audit --audit-level=high` wired into CI (0 known high/critical).
 - Deploy: staged `fly.toml` + `Dockerfile` + `.dockerignore` (deploy pending credentials).
 - Repo hygiene: PR template, bug/feature issue templates, `outreach.md` scaffold, README badges + Production status block.
+
+### v1.0.1-prod — deploy via static prerender + GitHub Pages
+- Replaced the Fly.io deploy path (payment + SSO-gated tokens = friction) with a zero-credential static deploy.
+- Added `scripts/prerender.ts`: snapshots every route to flat `.html` (relative nav links, host-agnostic) plus the API surface as JSON under `site/`.
+- Added `.github/workflows/pages.yml` (GitHub Pages via Actions; `GITHUB_TOKEN` only — no external secrets).
+- Removed `fly.toml`, `Dockerfile`, `.dockerignore`. No `0.0.0.0` bind change needed (static, no running server).
+- Custom `kineticgain.com` domain to be layered via a CNAME once the DNS record is created.
