@@ -9,7 +9,7 @@
  *
  * Deploy infra (Claude Code / Platform-SRE lane) — does not modify src/.
  */
-import { mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import {
@@ -74,6 +74,12 @@ for (const [file, data] of Object.entries(api)) {
 }
 // Disable Jekyll so files are served verbatim.
 writeFileSync(join(OUT, ".nojekyll"), "");
+
+// Carry the custom-domain CNAME into the published artifact, if present.
+const cnameSrc = join(process.cwd(), "CNAME");
+if (existsSync(cnameSrc)) {
+  copyFileSync(cnameSrc, join(OUT, "CNAME"));
+}
 
 console.log(
   `prerendered ${Object.keys(pages).length} pages + ${Object.keys(api).length} api files -> site/`
