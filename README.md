@@ -80,7 +80,7 @@ Open:
 | License | [AGPL-3.0-or-later](./LICENSE) |
 | Dependencies | Dependabot weekly (npm + GitHub Actions); `npm audit --audit-level=high` in CI |
 | Security | [SECURITY.md](./SECURITY.md) — 0 known high/critical advisories at v1.0-prod |
-| Deploy | Static prerender → GitHub Pages ([pages workflow](./.github/workflows/pages.yml)); custom `kineticgain.com` domain pending one DNS record |
+| Deploy | Static prerender → **https://dockets.kineticgain.com/** (Hostinger FTP, [deploy workflow](./.github/workflows/deploy.yml)) + github.io mirror ([pages workflow](./.github/workflows/pages.yml)) |
 
 ## Docs
 

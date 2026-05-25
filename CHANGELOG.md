@@ -27,3 +27,10 @@
 - Added `.github/workflows/pages.yml` (GitHub Pages via Actions; `GITHUB_TOKEN` only — no external secrets).
 - Removed `fly.toml`, `Dockerfile`, `.dockerignore`. No `0.0.0.0` bind change needed (static, no running server).
 - Custom `kineticgain.com` domain to be layered via a CNAME once the DNS record is created.
+
+### v1.0.2-prod — custom domain attempt (superseded)
+- Added a CNAME for the custom domain (later removed — see v1.0.3).
+
+### v1.0.3-prod — Hostinger FTP deploy for dockets.kineticgain.com
+- `dockets.kineticgain.com` is a Hostinger subdomain (A-record), so it's served from Hostinger, not GitHub Pages. Removed the CNAME and added `.github/workflows/deploy.yml` to build the static site and FTP-sync `site/` → the Hostinger `/dockets/` webroot (same pattern as the other kineticgain.com properties).
+- The GitHub Pages build is kept as a github.io mirror.
