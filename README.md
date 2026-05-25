@@ -1,5 +1,10 @@
 # Regulatory Comment Intelligence Hub
 
+[![CI](https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/regulatory-comment-intelligence-hub/actions/workflows/ci.yml)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](./LICENSE)
+[![Dependabot](https://img.shields.io/badge/dependabot-enabled-025E8C?logo=dependabot&logoColor=white)](./.github/dependabot.yml)
+[![Deploy](https://img.shields.io/badge/deploy-staged%20(fly.io)-lightgrey)](./fly.toml)
+
 TypeScript control plane for regulatory comment intake, obligation mapping, approval posture, and evidence-packaged submission workflows.
 
 ## Why this exists
@@ -59,6 +64,19 @@ Open:
 - `npm run demo`
 - `npm run smoke`
 - `npm run render:assets`
+
+## Production status
+
+<!-- Maintained by Claude Code (Platform/SRE lane) after v1.0-prod hardening. -->
+
+| Aspect | Status |
+|--------|--------|
+| CI | Node 20 + 22 matrix — lint · typecheck · coverage · build · demo · smoke · `npm audit` ([workflow](./.github/workflows/ci.yml)) |
+| Test coverage | 100% statements on `src/services/` (gate: ≥ 60%) |
+| License | [AGPL-3.0-or-later](./LICENSE) |
+| Dependencies | Dependabot weekly (npm + GitHub Actions); `npm audit --audit-level=high` in CI |
+| Security | [SECURITY.md](./SECURITY.md) — 0 known high/critical advisories at v1.0-prod |
+| Deploy | Config staged ([fly.toml](./fly.toml) + [Dockerfile](./Dockerfile)); awaiting deploy credentials |
 
 ## Docs
 

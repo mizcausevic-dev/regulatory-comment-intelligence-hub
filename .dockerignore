@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+.git
+.github
+docs
+screenshots
+scripts
+*.md
+.gitignore
+eslint.config.mjs
+vitest.config.ts
